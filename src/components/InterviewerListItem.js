@@ -1,10 +1,10 @@
 import React from "react";
 import "./InterviewerListItem.scss";
 
-// INTERVIEW ITEM w/ vlues w/ props, event handler, conditional scss & conditional rendering 
+// INTERVIEW ITEM w/ values w/ props, event handler, conditional scss & conditional rendering 
 export default function InterviewerListItem(props) {
   const { id, name, avatar, selected, setInterviewer } = props;
-
+  console.log("selected", selected);
   const handleClick = () => {
     setInterviewer(id);
   };
