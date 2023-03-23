@@ -17,6 +17,8 @@ import Show from "components/Appointment/Show";
 import Confirm from "components/Appointment/Confirm";
 import Status from "components/Appointment/Status";
 import Error from "components/Appointment/Error";
+import Form from "components/Appointment/Form";
+
 
 
 
@@ -165,6 +167,17 @@ storiesOf("Appointment", module)
       onCancel={action("onCancel")} />)
   )
   .add("Status", () => (<Status message="Deleting" />))
-  .add("Error", () => (<Error message="Could not delete appointment." onClose={action("onClose")} />));
+  .add("Error", () => (<Error message="Could not delete appointment." onClose={action("onClose")} />))
 
+  // APPOINTMENT FORM
+  .add("Edit Form", () => <Form
+    student="Jenn"
+    interviewer={3}
+    interviewers={interviewers}
+    onSave={action("onSave")}
+    onCancel={action("onCancel")} />)
 
+  .add("Create Form", () => <Form
+    interviewers={interviewers}
+    onSave={action("onSave")}
+    onCancel={action("onCancel")} />);
