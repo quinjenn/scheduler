@@ -18,10 +18,21 @@ export default function DayListItem(props) {
     }
   };
 
+  // REFRACTOR
   return (
-    <li className={dayClass} onClick={() => props.setDay(props.name)}>
+    <li className={dayClass} onClick={() => props.setDay(props.name)} selected={props.selected}>
       <h2 className="text--regular">{props.name}</h2>
-      <h3 className="text--light">{formatSpots(props.spots)}</h3>
+      <h3 className="text--light">{formatSpots()}</h3>
     </li>
   );
+
 }
+  // BEFORE REFRACTOR
+  // return (
+  //   <li className={dayClass} onClick={() => props.setDay(props.name)}>
+  //     <h2 className="text--regular">{props.name}</h2>
+  //     <h3 className="text--light">{props.spots} spots remaining</h3>
+  //   </li>
+  // );
+
+

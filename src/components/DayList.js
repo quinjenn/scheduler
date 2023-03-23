@@ -10,7 +10,9 @@ export default function DayList(props) {
         name={day.name}
         spots={day.spots}
         selected={day.selected}
-        setDay={props.setDay} />);
+        // setDay={props.setDay} />);  <BEFORE REFRACTOR
+        // REFRACTOR
+        setDay={() => props.setDay(day.id)} />);
   });
 
   return (
