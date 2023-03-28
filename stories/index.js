@@ -21,8 +21,6 @@ import Error from "components/Appointment/Error";
 import Form from "components/Appointment/Form";
 
 
-
-
 // BUTTON 
 storiesOf("Button", module)
   .addParameters({
