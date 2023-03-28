@@ -29,16 +29,6 @@ export default function Appointment(props) {
       student: name,
       interviewer
     };
-    // transition(SAVING);
-    // props.bookInterview(props.id, interview)
-    //   .then((response) => {
-    //     if (response === 204) {
-    //       transition(SHOW);
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     transition(ERROR_SAVE);
-    //   });
     transition(SAVING);
 
     props
@@ -47,16 +37,6 @@ export default function Appointment(props) {
       .catch(error => transition(ERROR_SAVE, true));
   }
   function destroy(event) {
-    // transition("DELETING");
-    // props.cancelInterview(props.id)
-    // .then(response => {
-    //   if (response === 204) {
-    //     transition(EMPTY);
-    //   }
-    // })
-    // .catch((error) => {
-    //   transition(ERROR_DELETE);
-    // });
     transition(DELETING, true);
 
     props
