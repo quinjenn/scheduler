@@ -61,7 +61,6 @@ const state = {
   }
 
 };
-// console.log(getInterview(state, state.appointments["3"].interview));
 
 // Appointment tests
 test("getAppointmentsForDay returns an array", () => {

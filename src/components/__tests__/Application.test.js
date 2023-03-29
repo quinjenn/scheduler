@@ -100,26 +100,21 @@ describe("Application", () => {
 
     fireEvent.click(queryByAltText(appointment, "Edit"));
 
-    // 4. Check that the form is displayed with the correct student name.
-    // expect(
-    //   getByPlaceholderText(appointment, /enter student name/i).value
-    // ).toBe("Archie Cohen");
-
-    // 5. Change the student name and save the appointment.
+    // 4. Change the student name and save the appointment.
     fireEvent.change(getByPlaceholderText(appointment, /enter student name/i), {
       target: { value: "Lydia Miller-Jones" },
     });
 
     fireEvent.click(getByText(appointment, "Save"));
 
-    // 6. Check that the element with the text "Saving" is displayed.
+    // 5. Check that the element with the text "Saving" is displayed.
     expect(getByText(appointment, "Saving")).toBeInTheDocument();
     // await waitForElementToBeRemoved(() => getByText(appointment, "Saving"));
 
-    // 7. Wait until the element with the edited student name is displayed.
+    // 6. Wait until the element with the edited student name is displayed.
     await waitForElement(() => getByText(appointment, "Lydia Miller-Jones"));
 
-    // 8. Check that the DayListItem with the text "Monday" has the same number of spots remaining.
+    // 7. Check that the DayListItem with the text "Monday" has the same number of spots remaining.
     const day = getAllByTestId(container, "day").find((day) =>
       queryByText(day, "Monday")
     );
