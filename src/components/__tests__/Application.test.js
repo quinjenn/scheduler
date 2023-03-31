@@ -133,7 +133,6 @@ describe("Application", () => {
 
     // 3. Click the "Add" button on an appointment.
     const appointment = getAllByTestId(container, "appointment")[0];
-    (console.log("appointment", appointment));
 
     fireEvent.click(getByAltText(appointment, "Add"));
 
